@@ -30,6 +30,7 @@ namespace ROVER
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnInboeken = new System.Windows.Forms.Button();
             this.btnHeenzenden = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -49,11 +50,9 @@ namespace ROVER
             this.label7 = new System.Windows.Forms.Label();
             this.txtBsn = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnInboeken = new System.Windows.Forms.Button();
             this.txtTemp = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCase1)).BeginInit();
             this.SuspendLayout();
@@ -66,19 +65,30 @@ namespace ROVER
             this.groupBox1.Controls.Add(this.btnSubmit);
             this.groupBox1.Location = new System.Drawing.Point(12, 383);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(503, 55);
+            this.groupBox1.Size = new System.Drawing.Size(491, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // btnInboeken
+            // 
+            this.btnInboeken.Location = new System.Drawing.Point(113, 20);
+            this.btnInboeken.Name = "btnInboeken";
+            this.btnInboeken.Size = new System.Drawing.Size(140, 23);
+            this.btnInboeken.TabIndex = 3;
+            this.btnInboeken.Text = "Arrestant inboeken";
+            this.btnInboeken.UseVisualStyleBackColor = true;
+            this.btnInboeken.Click += new System.EventHandler(this.btnInboeken_Click);
             // 
             // btnHeenzenden
             // 
             this.btnHeenzenden.Location = new System.Drawing.Point(339, 20);
             this.btnHeenzenden.Name = "btnHeenzenden";
-            this.btnHeenzenden.Size = new System.Drawing.Size(152, 23);
+            this.btnHeenzenden.Size = new System.Drawing.Size(146, 23);
             this.btnHeenzenden.TabIndex = 2;
             this.btnHeenzenden.Text = "Arrestant heenzenden";
             this.btnHeenzenden.UseVisualStyleBackColor = true;
+            this.btnHeenzenden.Click += new System.EventHandler(this.btnHeenzenden_Click);
             // 
             // btnClose
             // 
@@ -88,6 +98,7 @@ namespace ROVER
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Zaak sluiten";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSubmit
             // 
@@ -206,7 +217,7 @@ namespace ROVER
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 147);
+            this.label7.Location = new System.Drawing.Point(16, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 15;
@@ -226,13 +237,6 @@ namespace ROVER
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(38, 323);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 18;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -242,24 +246,6 @@ namespace ROVER
             this.label8.TabIndex = 19;
             this.label8.Text = "Datum misdrijf";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 307);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Datum voorgeleiding";
-            // 
-            // btnInboeken
-            // 
-            this.btnInboeken.Location = new System.Drawing.Point(113, 20);
-            this.btnInboeken.Name = "btnInboeken";
-            this.btnInboeken.Size = new System.Drawing.Size(140, 23);
-            this.btnInboeken.TabIndex = 3;
-            this.btnInboeken.Text = "Arrestant inboeken";
-            this.btnInboeken.UseVisualStyleBackColor = true;
-            // 
             // txtTemp
             // 
             this.txtTemp.Location = new System.Drawing.Point(125, 188);
@@ -267,15 +253,23 @@ namespace ROVER
             this.txtTemp.Size = new System.Drawing.Size(172, 20);
             this.txtTemp.TabIndex = 21;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "meldingnummer";
+            // 
             // AangifteInvoerenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(518, 450);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTemp);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtBsn);
             this.Controls.Add(this.label7);
@@ -324,9 +318,8 @@ namespace ROVER
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBsn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTemp;
+        private System.Windows.Forms.Label label10;
     }
 }
