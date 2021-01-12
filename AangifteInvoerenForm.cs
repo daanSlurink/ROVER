@@ -38,14 +38,29 @@ namespace ROVER
                 {
                    meldingsnummer = txtTemp.Text,
                    aNaam = txtAnaam.Text,
-                    vNaam = txtVnaam.Text,
-                    bsn = txtBsn.Text
+                   vNaam = txtVnaam.Text,
+                   bsn = txtBsn.Text
                     
                 });
                 txtEigenWN.Text = string.Empty;
                 txtMisdrijf.Text = string.Empty;
                 txtTemp.Text = string.Empty;
             }
+        }
+
+        private void btnHeenzenden_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Arrestant heengezonden");
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("zaak gesloten, hoezee!");
+        }
+
+        private void btnInboeken_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Arrestant ingeboekt, stuk tuig!");
         }
     }
 }
