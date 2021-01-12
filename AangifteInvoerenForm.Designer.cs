@@ -30,6 +30,7 @@ namespace ROVER
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnInboeken = new System.Windows.Forms.Button();
             this.btnHeenzenden = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -52,8 +53,8 @@ namespace ROVER
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnInboeken = new System.Windows.Forms.Button();
             this.txtTemp = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCase1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +71,15 @@ namespace ROVER
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // btnInboeken
+            // 
+            this.btnInboeken.Location = new System.Drawing.Point(113, 20);
+            this.btnInboeken.Name = "btnInboeken";
+            this.btnInboeken.Size = new System.Drawing.Size(140, 23);
+            this.btnInboeken.TabIndex = 3;
+            this.btnInboeken.Text = "Arrestant inboeken";
+            this.btnInboeken.UseVisualStyleBackColor = true;
             // 
             // btnHeenzenden
             // 
@@ -206,7 +216,7 @@ namespace ROVER
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 147);
+            this.label7.Location = new System.Drawing.Point(16, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 15;
@@ -251,15 +261,6 @@ namespace ROVER
             this.label9.TabIndex = 20;
             this.label9.Text = "Datum voorgeleiding";
             // 
-            // btnInboeken
-            // 
-            this.btnInboeken.Location = new System.Drawing.Point(113, 20);
-            this.btnInboeken.Name = "btnInboeken";
-            this.btnInboeken.Size = new System.Drawing.Size(140, 23);
-            this.btnInboeken.TabIndex = 3;
-            this.btnInboeken.Text = "Arrestant inboeken";
-            this.btnInboeken.UseVisualStyleBackColor = true;
-            // 
             // txtTemp
             // 
             this.txtTemp.Location = new System.Drawing.Point(125, 188);
@@ -267,11 +268,21 @@ namespace ROVER
             this.txtTemp.Size = new System.Drawing.Size(172, 20);
             this.txtTemp.TabIndex = 21;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 13);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "meldingnummer";
+            // 
             // AangifteInvoerenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTemp);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -328,5 +339,6 @@ namespace ROVER
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTemp;
+        private System.Windows.Forms.Label label10;
     }
 }
