@@ -106,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="searchForm.resx">
+      <DependentUpon>searchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSetCase.xsc">
       <DependentUpon>DataSetCase.xsd</DependentUpon>
     </None>

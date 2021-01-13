@@ -45,6 +45,12 @@ namespace ROVER
                 txtEigenWN.Text = string.Empty;
                 txtMisdrijf.Text = string.Empty;
                 txtTemp.Text = string.Empty;
+                txtAnaam.Text = string.Empty;
+                txtBsn.Text = string.Empty;
+                txtTemp.Text = string.Empty;
+                txtVhGetuige.Text = string.Empty;
+                txtVhVerdachte.Text = string.Empty;
+                txtVnaam.Text = string.Empty;
             }
         }
 

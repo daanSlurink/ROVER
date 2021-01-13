@@ -39,24 +39,24 @@ namespace ROVER
             this.btnAangifte = new System.Windows.Forms.Button();
             this.btnOpenAangifte = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataSetCase = new ROVER.DataSetCase();
-            this.tblcaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_caseTableAdapter = new ROVER.DataSetCaseTableAdapters.tbl_caseTableAdapter();
-            this.btnAddAD = new System.Windows.Forms.Button();
             this.meldingsnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.misdrijfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.waarnemingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumVoorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.samenvattingVerdachteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.samenvattingGetuigeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblcaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetCase = new ROVER.DataSetCase();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbl_caseTableAdapter = new ROVER.DataSetCaseTableAdapters.tbl_caseTableAdapter();
+            this.btnAddAD = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -137,57 +137,7 @@ namespace ROVER
             this.dataGridView1.Size = new System.Drawing.Size(531, 212);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Lopende zaken";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(13, 139);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(115, 29);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Gegevens opzoeken";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(153, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(390, 158);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dataSetCase
-            // 
-            this.dataSetCase.DataSetName = "DataSetCase";
-            this.dataSetCase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblcaseBindingSource
-            // 
-            this.tblcaseBindingSource.DataMember = "tbl_case";
-            this.tblcaseBindingSource.DataSource = this.dataSetCase;
-            // 
-            // tbl_caseTableAdapter
-            // 
-            this.tbl_caseTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnAddAD
-            // 
-            this.btnAddAD.Location = new System.Drawing.Point(13, 174);
-            this.btnAddAD.Name = "btnAddAD";
-            this.btnAddAD.Size = new System.Drawing.Size(115, 29);
-            this.btnAddAD.TabIndex = 8;
-            this.btnAddAD.Text = "Agent Toevoegen";
-            this.btnAddAD.UseVisualStyleBackColor = true;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // meldingsnummerDataGridViewTextBoxColumn
             // 
@@ -225,6 +175,57 @@ namespace ROVER
             this.samenvattingGetuigeDataGridViewTextBoxColumn.HeaderText = "samenvattingGetuige";
             this.samenvattingGetuigeDataGridViewTextBoxColumn.Name = "samenvattingGetuigeDataGridViewTextBoxColumn";
             // 
+            // tblcaseBindingSource
+            // 
+            this.tblcaseBindingSource.DataMember = "tbl_case";
+            this.tblcaseBindingSource.DataSource = this.dataSetCase;
+            // 
+            // dataSetCase
+            // 
+            this.dataSetCase.DataSetName = "DataSetCase";
+            this.dataSetCase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Lopende zaken";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(13, 139);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(115, 29);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Gegevens opzoeken";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(153, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(390, 158);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tbl_caseTableAdapter
+            // 
+            this.tbl_caseTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAddAD
+            // 
+            this.btnAddAD.Location = new System.Drawing.Point(13, 174);
+            this.btnAddAD.Name = "btnAddAD";
+            this.btnAddAD.Size = new System.Drawing.Size(115, 29);
+            this.btnAddAD.TabIndex = 8;
+            this.btnAddAD.Text = "Agent Toevoegen";
+            this.btnAddAD.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,9 +245,9 @@ namespace ROVER
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
