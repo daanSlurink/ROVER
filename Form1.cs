@@ -22,11 +22,6 @@ namespace ROVER
             lbluName.Text = UsernameControl.Username;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-        }
         private void btnAangifte_Click(object sender, EventArgs e)
         {
             AangifteInvoerenForm aangifteInvoeren = new AangifteInvoerenForm();
@@ -68,9 +63,20 @@ namespace ROVER
 
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ArrestatieOpenForm form = new ArrestatieOpenForm();
+            form.txtTemp.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            form.txtVnaam.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            form.txtAnaam.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            form.txtBsn.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            form.txtMisdrijf.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            form.txtEigenWN.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            //form.dateTimePicker1.Value = this.dataGridView1.CurrentRow.Cells[6].Value.ToString("hh:mm tt");
+            form.txtVhVerdachte.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            form.txtVhGetuige.Text = this.dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            form.ShowDialog();
         }
     }
 }
