@@ -33,18 +33,11 @@ namespace ROVER
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.lblInfo = new System.Windows.Forms.ToolStripLabel();
-            this.lblVnaam = new System.Windows.Forms.ToolStripLabel();
-            this.lblAnaam = new System.Windows.Forms.ToolStripLabel();
+            this.lbluName = new System.Windows.Forms.ToolStripLabel();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnAangifte = new System.Windows.Forms.Button();
             this.btnOpenAangifte = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.meldingsnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.misdrijfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.waarnemingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumVoorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.samenvattingVerdachteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.samenvattingGetuigeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblcaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetCase = new ROVER.DataSetCase();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,8 +56,7 @@ namespace ROVER
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblInfo,
-            this.lblVnaam,
-            this.lblAnaam,
+            this.lbluName,
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -78,17 +70,10 @@ namespace ROVER
             this.lblInfo.Size = new System.Drawing.Size(33, 22);
             this.lblInfo.Text = "User:";
             // 
-            // lblVnaam
+            // lbluName
             // 
-            this.lblVnaam.Name = "lblVnaam";
-            this.lblVnaam.Size = new System.Drawing.Size(61, 22);
-            this.lblVnaam.Text = "Voornaam";
-            // 
-            // lblAnaam
-            // 
-            this.lblAnaam.Name = "lblAnaam";
-            this.lblAnaam.Size = new System.Drawing.Size(72, 22);
-            this.lblAnaam.Text = "Achternaam";
+            this.lbluName.Name = "lbluName";
+            this.lbluName.Size = new System.Drawing.Size(0, 22);
             // 
             // tsbRefresh
             // 
@@ -122,58 +107,13 @@ namespace ROVER
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.meldingsnummerDataGridViewTextBoxColumn,
-            this.misdrijfDataGridViewTextBoxColumn,
-            this.waarnemingDataGridViewTextBoxColumn,
-            this.datumVoorDataGridViewTextBoxColumn,
-            this.samenvattingVerdachteDataGridViewTextBoxColumn,
-            this.samenvattingGetuigeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblcaseBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 226);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(531, 212);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            // 
-            // meldingsnummerDataGridViewTextBoxColumn
-            // 
-            this.meldingsnummerDataGridViewTextBoxColumn.DataPropertyName = "meldingsnummer";
-            this.meldingsnummerDataGridViewTextBoxColumn.HeaderText = "meldingsnummer";
-            this.meldingsnummerDataGridViewTextBoxColumn.Name = "meldingsnummerDataGridViewTextBoxColumn";
-            // 
-            // misdrijfDataGridViewTextBoxColumn
-            // 
-            this.misdrijfDataGridViewTextBoxColumn.DataPropertyName = "misdrijf";
-            this.misdrijfDataGridViewTextBoxColumn.HeaderText = "misdrijf";
-            this.misdrijfDataGridViewTextBoxColumn.Name = "misdrijfDataGridViewTextBoxColumn";
-            // 
-            // waarnemingDataGridViewTextBoxColumn
-            // 
-            this.waarnemingDataGridViewTextBoxColumn.DataPropertyName = "waarneming";
-            this.waarnemingDataGridViewTextBoxColumn.HeaderText = "waarneming";
-            this.waarnemingDataGridViewTextBoxColumn.Name = "waarnemingDataGridViewTextBoxColumn";
-            // 
-            // datumVoorDataGridViewTextBoxColumn
-            // 
-            this.datumVoorDataGridViewTextBoxColumn.DataPropertyName = "datumVoor";
-            this.datumVoorDataGridViewTextBoxColumn.HeaderText = "datumVoor";
-            this.datumVoorDataGridViewTextBoxColumn.Name = "datumVoorDataGridViewTextBoxColumn";
-            // 
-            // samenvattingVerdachteDataGridViewTextBoxColumn
-            // 
-            this.samenvattingVerdachteDataGridViewTextBoxColumn.DataPropertyName = "samenvattingVerdachte";
-            this.samenvattingVerdachteDataGridViewTextBoxColumn.HeaderText = "samenvattingVerdachte";
-            this.samenvattingVerdachteDataGridViewTextBoxColumn.Name = "samenvattingVerdachteDataGridViewTextBoxColumn";
-            // 
-            // samenvattingGetuigeDataGridViewTextBoxColumn
-            // 
-            this.samenvattingGetuigeDataGridViewTextBoxColumn.DataPropertyName = "samenvattingGetuige";
-            this.samenvattingGetuigeDataGridViewTextBoxColumn.HeaderText = "samenvattingGetuige";
-            this.samenvattingGetuigeDataGridViewTextBoxColumn.Name = "samenvattingGetuigeDataGridViewTextBoxColumn";
             // 
             // tblcaseBindingSource
             // 
@@ -257,8 +197,7 @@ namespace ROVER
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel lblInfo;
-        private System.Windows.Forms.ToolStripLabel lblVnaam;
-        private System.Windows.Forms.ToolStripLabel lblAnaam;
+        private System.Windows.Forms.ToolStripLabel lbluName;
         private System.Windows.Forms.Button btnAangifte;
         private System.Windows.Forms.Button btnOpenAangifte;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -270,12 +209,6 @@ namespace ROVER
         private System.Windows.Forms.BindingSource tblcaseBindingSource;
         private DataSetCaseTableAdapters.tbl_caseTableAdapter tbl_caseTableAdapter;
         private System.Windows.Forms.Button btnAddAD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn meldingsnummerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn misdrijfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn waarnemingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datumVoorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn samenvattingVerdachteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn samenvattingGetuigeDataGridViewTextBoxColumn;
     }
 }
 

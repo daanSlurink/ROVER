@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ROVER
 {
     public partial class Form1 : Form
     {
-      
+
+              
         public Form1()
         {
             InitializeComponent();
+            lbluName.Text = UsernameControl.Username;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,31 +53,24 @@ namespace ROVER
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSetCase.tbl_case' table. You can move, or remove it, as needed.
-            this.tbl_caseTableAdapter.Fill(this.dataSetCase.tbl_case);
+            //  this.tbl_caseTableAdapter.Fill(this.dataSetCase.tbl_case);
+            string mainconn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            SqlConnection sqlConn = new SqlConnection(mainconn);
+            string sqlQuery = "SELECT tbl_case.meldingsnummer, tbl_Persoon.vNaam,tbl_Persoon.aNaam, tbl_Persoon.bsn, tbl_case.misdrijf,tbl_case.waarneming,tbl_case.datumVoor,tbl_case.samenvattingVerdachte,tbl_case.samenvattingVerdachte";
+            sqlQuery += " FROM tbl_case inner join tbl_Persoon ON tbl_case.meldingsnummer = tbl_Persoon.meldingsnummer";          
+            SqlCommand  sqlcomm = new SqlCommand(sqlQuery, sqlConn);
+            sqlConn.Open();
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+            DataTable dt =  new DataTable();
+            sdr.Fill(dt);
+            dataGridView1.DataSource = dt;
+            sqlConn.Close();
 
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.dataGridView1.SelectedRows.Count == 0)
-                return;
 
-            System.Windows.Forms.Form Form = new Form();
-            int count = 0;
-            foreach (DataGridViewCell cell in this.dataGridView1.SelectedRows[0].Cells)
-            {
-                string value = cell.Value == null ? string.Empty : cell.Value.ToString();
-
-                TextBox textBox = new TextBox()
-                {
-                    Text = value,
-                    Top = 27 * count + 10
-                };
-                Form.Controls.Add(textBox);
-                count++;
-            }
-            Form.Height = (count + 1) * 37;
-            Form.Show();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace ROVER
                 connection.Open();
                 var command = factory.CreateCommand();
                 command.Connection = connection;
-                command.CommandText = "select * from tbl_case";
+                command.CommandText = "select * from tbl_case join tbl_Persoon on 1=1";
                 using (DbDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())

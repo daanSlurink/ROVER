@@ -37,7 +37,7 @@ namespace ROVER
             return authenticated;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void btnLogin_Click(object sender, EventArgs e)
         {
 
             string server = "LDAP://politie.oost";
@@ -54,6 +54,7 @@ namespace ROVER
             {
                 MessageBox.Show("foute wagwoord chef");
             }
+            UsernameControl.Username = txtUsername.Text;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
