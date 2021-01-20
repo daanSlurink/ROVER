@@ -197,7 +197,6 @@ namespace ROVER
         private System.Windows.Forms.ToolStripLabel lblInfo;
         private System.Windows.Forms.ToolStripLabel lbluName;
         private System.Windows.Forms.Button btnAangifte;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton tsbRefresh;
@@ -207,6 +206,7 @@ namespace ROVER
         private System.Windows.Forms.Button btnAddAD;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

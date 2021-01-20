@@ -73,6 +73,7 @@ namespace ROVER
             // 
             // txtTemp
             // 
+            this.txtTemp.Enabled = false;
             this.txtTemp.Location = new System.Drawing.Point(117, 175);
             this.txtTemp.Name = "txtTemp";
             this.txtTemp.Size = new System.Drawing.Size(172, 20);
@@ -250,6 +251,7 @@ namespace ROVER
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Opslaan";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // ArrestatieOpenForm
             // 

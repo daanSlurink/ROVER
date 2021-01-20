@@ -42,7 +42,17 @@ namespace ROVER
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-            dataGridView1.Update();
+            string mainconn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            SqlConnection sqlConn = new SqlConnection(mainconn);
+            string sqlQuery = "SELECT tbl_case.meldingsnummer, tbl_Persoon.vNaam,tbl_Persoon.aNaam, tbl_Persoon.bsn, tbl_case.misdrijf,tbl_case.waarneming,tbl_case.datumVoor,tbl_case.samenvattingVerdachte,tbl_case.samenvattingVerdachte";
+            sqlQuery += " FROM tbl_case inner join tbl_Persoon ON tbl_case.meldingsnummer = tbl_Persoon.meldingsnummer";
+            SqlCommand sqlcomm = new SqlCommand(sqlQuery, sqlConn);
+            sqlConn.Open();
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+
+            sdr.Fill(dt);
+            dataGridView1.DataSource = dt;
+            sqlConn.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -73,7 +83,7 @@ namespace ROVER
             form.txtBsn.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
             form.txtMisdrijf.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
             form.txtEigenWN.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            //form.dateTimePicker1.Value = this.dataGridView1.CurrentRow.Cells[6].Value.ToString("hh:mm tt");
+            form.txtDate.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
             form.txtVhVerdachte.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
             form.txtVhGetuige.Text = this.dataGridView1.CurrentRow.Cells[8].Value.ToString();
             form.ShowDialog();

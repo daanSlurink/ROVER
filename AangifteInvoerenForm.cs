@@ -32,7 +32,7 @@ namespace ROVER
             cmd.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
             sqlConn.Close();
-
+            this.Close();
 
             txtEigenWN.Text = string.Empty;
             txtMisdrijf.Text = string.Empty;
