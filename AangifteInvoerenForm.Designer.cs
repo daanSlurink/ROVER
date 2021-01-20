@@ -49,10 +49,10 @@ namespace ROVER
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBsn = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTemp = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCase1)).BeginInit();
             this.SuspendLayout();
@@ -230,21 +230,14 @@ namespace ROVER
             this.txtBsn.Size = new System.Drawing.Size(172, 20);
             this.txtBsn.TabIndex = 16;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(38, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(35, 235);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
+            this.label8.Size = new System.Drawing.Size(139, 13);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Datum misdrijf";
+            this.label8.Text = "Datum misdrijf - DD/MM/YY";
             // 
             // txtTemp
             // 
@@ -262,15 +255,22 @@ namespace ROVER
             this.label10.TabIndex = 22;
             this.label10.Text = "meldingnummer";
             // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(38, 255);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(155, 20);
+            this.txtDate.TabIndex = 23;
+            // 
             // AangifteInvoerenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 450);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTemp);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtBsn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -317,9 +317,9 @@ namespace ROVER
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBsn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTemp;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }

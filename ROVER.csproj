@@ -56,6 +56,12 @@
     <Compile Include="AangifteInvoerenForm.Designer.cs">
       <DependentUpon>AangifteInvoerenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAgent.Designer.cs">
+      <DependentUpon>AddAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ArrestatieOpenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="AangifteInvoerenForm.resx">
       <DependentUpon>AangifteInvoerenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAgent.resx">
+      <DependentUpon>AddAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArrestatieOpenForm.resx">
       <DependentUpon>ArrestatieOpenForm.cs</DependentUpon>
@@ -139,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1532796511053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Refresh_icon.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

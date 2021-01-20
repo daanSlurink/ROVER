@@ -24,13 +24,13 @@ namespace ROVER
         {
             string mainconn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             SqlConnection sqlConn = new SqlConnection(mainconn);
-            string sqlQuery = "SELECT tbl_case.meldingsnummer, tbl_Persoon.vNaam,tbl_Persoon.aNaam, tbl_Persoon.bsn, tbl_case.misdrijf,tbl_case.waarneming,tbl_case.datumVoor,tbl_case.samenvattingVerdachte,tbl_case.samenvattingVerdachte";
-            sqlQuery += " FROM tbl_case inner join tbl_Persoon ON tbl_case.meldingsnummer = tbl_Persoon.meldingsnummer";
-            SqlCommand sqlcomm = new SqlCommand(sqlQuery, sqlConn);
+            SqlCommand cmd;
+            SqlCommand cmd2;
             sqlConn.Open();
-            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
-            DataTable dt = new DataTable();
-            sdr.Fill(dt);
+            cmd = new SqlCommand("INSERT into  tbl_case(meldingsnummer, misdrijf,waarneming,datumvoor,samenvattingVerdachte, samenvattingGetuige) VALUES('" + txtTemp.Text + "','" + txtMisdrijf.Text + "','" + txtEigenWN.Text + "',' "+txtDate.Text+"  ','" + txtVhVerdachte.Text + "','" + txtVhGetuige.Text + "')", sqlConn); ;
+            cmd2 = new SqlCommand("INSERT into  tbl_Persoon(meldingsnummer, vNaam,aNaam,bsn) VALUES('" + txtTemp.Text + "','" + txtVnaam.Text + "','" + txtAnaam.Text + "','" + txtBsn.Text + "')", sqlConn);
+            cmd.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             sqlConn.Close();
 
 

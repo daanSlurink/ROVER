@@ -39,7 +39,7 @@ namespace ROVER
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 111);
+            this.btnLogin.Location = new System.Drawing.Point(12, 86);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(95, 23);
             this.btnLogin.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace ROVER
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace ROVER
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 73);
+            this.label2.Location = new System.Drawing.Point(13, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -67,14 +67,14 @@ namespace ROVER
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(98, 37);
+            this.txtUsername.Location = new System.Drawing.Point(98, 12);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(112, 20);
             this.txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(98, 70);
+            this.txtPassword.Location = new System.Drawing.Point(98, 45);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(112, 20);
             this.txtPassword.TabIndex = 4;
@@ -82,7 +82,7 @@ namespace ROVER
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(113, 111);
+            this.btnCancel.Location = new System.Drawing.Point(113, 86);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(102, 23);
             this.btnCancel.TabIndex = 5;
@@ -94,7 +94,7 @@ namespace ROVER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 143);
+            this.ClientSize = new System.Drawing.Size(220, 116);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);

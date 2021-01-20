@@ -15,7 +15,7 @@ namespace ROVER
     public partial class Form1 : Form
     {
 
-              
+        DataTable dt = new DataTable();
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace ROVER
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.Update();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace ROVER
             SqlCommand  sqlcomm = new SqlCommand(sqlQuery, sqlConn);
             sqlConn.Open();
             SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
-            DataTable dt =  new DataTable();
+
             sdr.Fill(dt);
             dataGridView1.DataSource = dt;
             sqlConn.Close();
@@ -77,6 +77,21 @@ namespace ROVER
             form.txtVhVerdachte.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
             form.txtVhGetuige.Text = this.dataGridView1.CurrentRow.Cells[8].Value.ToString();
             form.ShowDialog();
+        }
+
+        private void btnAddAD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            {
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = string.Format("anaam like '%{0}%'", txtSearch.Text);
+                dataGridView1.DataSource = dv.ToTable();
+            }
         }
     }
 }
