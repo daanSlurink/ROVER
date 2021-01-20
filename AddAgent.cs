@@ -16,5 +16,10 @@ namespace ROVER
         {
             InitializeComponent();
         }
+
+        private void AddAgent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
