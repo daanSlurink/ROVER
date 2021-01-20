@@ -14,12 +14,14 @@ namespace ROVER
 {
     public partial class Form1 : Form
     {
+        
 
         DataTable dt = new DataTable();
         public Form1()
         {
             InitializeComponent();
-            lbluName.Text = UsernameControl.Username;
+             
+            
         }
 
         private void btnAangifte_Click(object sender, EventArgs e)
@@ -103,5 +105,10 @@ namespace ROVER
                 dataGridView1.DataSource = dv.ToTable();
             }
         }
+        public void showData(string usrname)
+        {
+            lbluName.Text = usrname;
+        }
+
     }
 }

@@ -46,13 +46,15 @@ namespace ROVER
 
             if (IsAuthenticated(server, username, password) == true)
             {
-              //  MessageBox.Show(username + " is logged in");
+                //  MessageBox.Show(username + " is logged in");
+                string str = username;
                 Form1 form = new Form1();
+                form.showData(str);
                 form.Show();
             }
             else
             {
-                MessageBox.Show("foute wagwoord chef");
+                MessageBox.Show("Wachtwoord incorrect");
             }
             UsernameControl.Username = txtUsername.Text;
         }
